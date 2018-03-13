@@ -28,6 +28,16 @@ function speedScale(speed) {
   return sp;
 }
 
+// https://stackoverflow.com/a/25306038/4260179
+function heading(pd,ps) {
+  if (ps === undefined) {
+    return 0
+  }
+  return ((Math.atan2(
+    (ps.lng-pd.lng),
+    (ps.lat-pd.lat)
+  ) + Math.PI) * 360.0 / (2.0 * Math.PI) )
+}
 
 class MapContainer extends Component {
   state = {
@@ -61,7 +71,7 @@ class MapContainer extends Component {
 
     var selectedCoord = data[this.state.selectedIndex] ;
     var selectedSpeed = roundSpeed(selectedCoord) + " mph";
-    var selectedPosition = "lng: " + selectedCoord.lng + "\n" + "lat: " + selectedCoord.lat;
+    var selectedPosition = "lng: " + selectedCoord.lng.toString() + "\n" + "lat: " + selectedCoord.lat.toString();
 
     return (
       <div>
@@ -76,9 +86,11 @@ class MapContainer extends Component {
                 position={ (({ lng, lat }) => ({ lng, lat }))(coord)}
                 icon={{
                   path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                  fillColor: `red`,
-                  scaledSize: 1,
-                  fillOpacity: 1
+                  fillColor: RainBowColor(roundSpeed(coord)),
+                  scale: (speedScale(roundSpeed(coord))*25,speedScale(roundSpeed(coord))*25),
+                  fillOpacity: 1,
+                  rotation: heading(coord, data[index+1]),
+                  strokeOpacity: 0
                 }}
                 onClick={() => (this.onMarkerClick(index))}
           />
