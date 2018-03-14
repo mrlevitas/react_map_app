@@ -25,11 +25,10 @@ class ShowTrip extends Component {
     const { coords, start_time, end_time } = this.state.tripJson
     var sDate = Date.parse( start_time)
     var eDate = Date.parse( end_time)
-    var timeTaken =  parseInt((eDate - sDate)/1000);
+    var timeTaken =  parseInt((eDate - sDate), 10)/1000;
 
     var minutes = Math.floor(timeTaken / 60);
     var hours = Math.floor(timeTaken / 3600);
-    var seconds = timeTaken - minutes * 60;
 
     return(
       <div>
