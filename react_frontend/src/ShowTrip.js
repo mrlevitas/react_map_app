@@ -4,7 +4,7 @@ import MapContainer from './MapContainer'
 class ShowTrip extends Component {
   state = {
      tripJson: {}
-   }
+  }
 
   componentDidMount() {
     var that = this;
@@ -43,7 +43,7 @@ class ShowTrip extends Component {
             loadingElement={<div style={{ height: `100%` }} />}
             containerElement={<div style={{ height: `400px` }} />}
             mapElement={<div style={{ height: `100%` }} />}
-          /> : "" }
+          /> : "Loading..." }
       </div>
     )
   }

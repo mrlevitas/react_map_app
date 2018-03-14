@@ -4,7 +4,7 @@ import { Route, Link } from 'react-router-dom'
 class ListTrips extends Component {
   render() {
     const { trips } = this.props
-    
+
     return (
       <div className='list-trips'>
         <ol className='trip-list'>
@@ -18,7 +18,6 @@ class ListTrips extends Component {
             </li>
           ))}
         </ol>
-
       </div>
     )
   }
