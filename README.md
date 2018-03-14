@@ -4,6 +4,9 @@ date: March 2018
 to start:
 
 `cd express_json_server`
+
+`npm install`
+
 and run
 `node index.js`
 to boot json api
@@ -12,6 +15,9 @@ Filenames are sent for the index request and are used as keys to fetch data for 
 
 In a separate terminal, run:
 `cd react_frontend`
+
+`npm install`
+
 `npm start`
 
 and navigate to `localhost:3000`
