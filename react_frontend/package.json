@@ -4,21 +4,17 @@
   "private": true,
   "dependencies": {
     "all": "0.0.0",
-    "google-map-react": "^0.34.0",
-    "google-maps-react": "1.1.2",
-    "module": "^1.2.5",
-    "package.json": "^2.0.1",
     "react": "^15.0.0",
     "react-dom": "^15.0.0",
     "react-google-maps": "^9.4.5",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.1.1",
-    "recompose": "^0.26.0"
+    "react-scripts": "1.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "devDependencies": {}
 }

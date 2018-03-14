@@ -69,7 +69,7 @@ class MapContainer extends Component {
 
     var selectedCoord = data[this.state.selectedIndex];
     var selectedSpeed = roundSpeed(selectedCoord) + " mph";
-    var selectedPosition = "lng: " + selectedCoord.lng.toString() + "\n" + "lat: " + selectedCoord.lat.toString();
+    var selectedPosition = "lng: " + selectedCoord.lng.toString() + " lat: " + selectedCoord.lat.toString();
 
     return (
       <div>
